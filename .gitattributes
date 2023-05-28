@@ -1,2 +1,2 @@
 my-efficientnet-b1 filter=lfs diff=lfs merge=lfs -text
-*.gs linguist-language=Python
+*.ipynb linguist-detectable=false
