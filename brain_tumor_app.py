@@ -57,7 +57,7 @@ def upload():
     
     if show_data == 'Neural network':
         
-        st.subheader('Архитектура модели')
+        st.subheader('Model Architecture')
         st.markdown(
             "##### Documentation of the PyTorch model: [efficientnet-b1](https://pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b1.html).")
         
@@ -103,7 +103,7 @@ def upload():
         st.success('The neural network is loaded! Everything is ready to upload the MRI image!', icon="✅")
         
         # Загрузка файла
-        uploaded_file = st.file_uploader("Выберите файл")
+        uploaded_file = st.file_uploader("Select a file")
 
         # Проверка на допустимость формата файла
         if uploaded_file is not None:
