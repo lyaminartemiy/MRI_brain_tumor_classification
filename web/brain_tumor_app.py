@@ -17,7 +17,7 @@ import streamlit as st
 
 import sys
 # "sys.path.append(r"../")
-# from EfficientNetModel import EfficientNetModel
+from EfficientNetModel import EfficientNetModel
 
 
 st.set_page_config(
