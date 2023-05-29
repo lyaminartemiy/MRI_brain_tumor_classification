@@ -59,7 +59,7 @@ def upload():
         
         st.subheader('Архитектура модели')
         st.markdown(
-            "##### Документация модели PyTorch: [efficientnet-b1](https://pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b1.html).")
+            "##### Documentation of the PyTorch model: [efficientnet-b1](https://pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b1.html).")
         
         architecture = Image.open('web/efficient-net/architecture.png')
         perfomance = Image.open('web/efficient-net/perfomance.png')
@@ -69,38 +69,38 @@ def upload():
         
     elif show_data == 'Types of tumors':
         
-        st.subheader('Примеры МРТ снимков')
+        st.subheader('Examples of MRI images')
         
-        tab1, tab2, tab3 = st.tabs(["Глиома", "Менингиома", "Гипофиз"])
+        tab1, tab2, tab3 = st.tabs(["Glioma", "Meningioma", "Pituitary Tumor"])
         
         image1 = Image.open('web/Glioma.png')
         image2 = Image.open('web/Meningioma.png')
         image3 = Image.open('web/Pituitary.png')
         
         with tab1:
-            st.image(image1, caption='Пример МРТ снимка: ГЛИОМА')
+            st.image(image1, caption='Example of an MRI image: GLIOMA')
             st.divider()
-            st.write("""Глиома головного мозга — наиболее распространенная опухоль головного мозга, берущая свое начало из различных клеток глии. Клинические проявления глиомы зависят от ее расположения и могут включать головную боль, тошноту, вестибулярную атаксию, расстройство зрения, парезы и параличи, дизартрию, нарушения чувствительности, судорожные приступы и прочее""")
-            st.write("""Глиома головного мозга диагностируется по результатам МРТ головного мозга и морфологического исследования опухолевых тканей. Вспомогательное значение имеет проведение Эхо-ЭГ, ЭЭГ, ангиографии сосудов головного мозга, ЭЭГ, офтальмоскопии, исследования цереброспинальной жидкости, ПЭТ и сцинтиграфии. Общепринятыми способами лечения в отношении глиомы головного мозга являются хирургическое удаление, лучевая терапия, стереотаксическая радиохирургия и химиотерапия.""")
+            st.write("""Brain glioma is the most common brain tumor originating from various glial cells. Clinical manifestations of glioma depend on its location and may include headache, nausea, vestibular ataxia, visual impairment, paresis and paralysis, dysarthria, sensitivity disorders, seizures, etc.""")
+            st.write("""Glioma of the brain is diagnosed according to the results of MRI of the brain and morphological examination of tumor tissues. It is of auxiliary importance to carry out Echo-EG, EEG, angiography of cerebral vessels, EEG, ophthalmoscopy, examination of cerebrospinal fluid, PET and scintigraphy. Conventional methods of treatment for brain glioma are surgical removal, radiation therapy, stereotactic radiosurgery and chemotherapy.""")
         
         with tab2:
-            st.image(image2, caption='Пример МРТ снимка: МЕНИНГИОМА')
+            st.image(image2, caption='Example of an MRI image: MENINGIOMA')
             st.divider()
-            st.write("""Менингиома представляет собой опухоль, чаще всего доброкачественной природы, произрастающую из арахноэндотелия мозговых оболочек. Обычно опухоль локализуется на поверхности мозга (реже на конвекситальной поверхности либо на основании черепа, редко в желудочках, или в костной ткани). Как и для многих других доброкачественных опухолей, для менингиом характерен медленный рост. Довольно часто не дает о себе знать, вплоть до значительного увеличения новообразования; иногда бывает случайной находкой при компьютерной или магнитно-резонансной томографии.""")
-            st.write("""В клинической неврологии менингиома по частоте встречаемости занимает второе место после глиом. Всего менингиомы составляют примерно 20-25% от всех опухолей центральной нервной системы. Менингиомы возникают преимущественно у людей в возрасте 35-70 лет; чаще всего наблюдаются у женщин. У детей встречаются довольно редко и составляют примерно 1,5% от всех детских новообразований ЦНС. 8-10% опухолей паутинной мозговой оболочки представлены атипичными и злокачественными менингиомами.""")
+            st.write("""Meningioma is a tumor, most often of a benign nature, growing from the arachnoendothelium of the meninges. Usually the tumor is localized on the surface of the brain (less often on the convexital surface or on the base of the skull, rarely in the ventricles, or in bone tissue). As with many other benign tumors, meningiomas are characterized by slow growth. Quite often it does not make itself felt, up to a significant increase in the neoplasm; sometimes it happens to be an accidental finding with computer or magnetic resonance imaging.""")
+            st.write("""In clinical neurology, meningioma ranks second after gliomas in frequency of occurrence. In total, meningiomas account for about 20-25% of all tumors of the central nervous system. Meningiomas occur mainly in people aged 35-70 years; they are most often observed in women. In children, they are quite rare and account for about 1.5% of all childhood neoplasms of the central nervous system. 8-10% of tumors of the arachnoid meningioma are represented by atypical and malignant meningiomas.""")
             
         with tab3:
-            st.image(image3, caption='Пример МРТ снимка: ОПУХОЛЬ ГИПОФИЗА')
+            st.image(image3, caption='Example of an MRI image: PITUITARY TUMOR')
             st.divider()
-            st.write("""Опухоли гипофиза – группа доброкачественных, реже – злокачественных новообразований передней доли (аденогипофиза) или задней доли (нейрогипофиза) железы. Опухоли гипофиза, по статистике, составляют около 15% новообразований внутричерепной локализации. Они одинаково часто диагностируются у лиц обоих полов, обычно в возрасте 30-40 лет. Подавляющее большинство опухолей гипофиза составляют аденомы, которые подразделяются на несколько видов в зависимости от размеров и гормональной активности. Симптомы опухоли гипофиза представляют собой сочетание признаков объемного внутримозгового процесса и гормональных нарушений. Диагностика опухоли гипофиза осуществляется проведением целого ряда клинических и гормональных исследований, ангиографии и МРТ головного мозга.""")
-            st.write("""Опухоли гипофиза – группа доброкачественных, реже – злокачественных новообразований передней доли (аденогипофиза) или задней доли (нейрогипофиза) железы. Опухоли гипофиза, по статистике, составляют около 15% новообразований внутричерепной локализации. Они одинаково часто диагностируются у лиц обоих полов, обычно в возрасте 30-40 лет.""")
+            st.write("""Pituitary tumors are a group of benign, rarely malignant neoplasms of the anterior lobe (adenohypophysis) or posterior lobe (neurohypophysis) of the gland. Pituitary tumors, according to statistics, account for about 15% of tumors of intracranial localization. They are equally often diagnosed in persons of both sexes, usually at the age of 30-40 years. The vast majority of pituitary tumors are adenomas, which are divided into several types depending on the size and hormonal activity. The symptoms of a pituitary tumor are a combination of signs of a volumetric intracerebral process and hormonal disorders. Diagnosis of a pituitary tumor is carried out by a number of clinical and hormonal studies, angiography and MRI of the brain.""")
+            st.write("""Pituitary tumors are a group of benign, rarely malignant neoplasms of the anterior lobe (adenohypophysis) or posterior lobe (neurohypophysis) of the gland. Pituitary tumors, according to statistics, account for about 15% of tumors of intracranial localization. They are equally often diagnosed in persons of both sexes, usually at the age of 30-40 years.""")
         
     elif show_data == 'Classify the tumor':
         
-        with st.spinner('Нейросеть загружается...'):
+        with st.spinner('The neural network is being loaded...'):
             model = EfficientNetModel('efficientnet-b1', path_to_model_dict='my-efficientnet-b1')
 
-        st.success('Нейросеть загружена! Всё готово к загрузке снимка!', icon="✅")
+        st.success('The neural network is loaded! Everything is ready to upload the MRI image!', icon="✅")
         
         # Загрузка файла
         uploaded_file = st.file_uploader("Выберите файл")
@@ -119,13 +119,13 @@ def upload():
             elif format_name == "jpg":
                 image = Image.open(uploaded_file)
             else:
-                st.write("Можно загрузить только файлы формата png или jpeg (jpg).")
-                st.write("Попробуйте снова!")
+                st.write("You can only upload png or jpeg (jpg) files.")
+                st.write("Try again!")
                 return 0
             
-            classes = ['МЕНИНГИОМА', 'ГЛИОМА', 'ОПУХОЛЬ ГИПОФИЗА']
+            classes = ['MENINGIOMA', 'GLIOMA', 'PITUITARY TUMOR']
             
-            st.image(image, caption='ЗАГРУЖЕННЫЙ СНИМОК')
+            st.image(image, caption='UPLOADED MRI IMAGE')
             
             transforms = T.Compose([
                 T.Resize((224, 224)),
@@ -140,12 +140,12 @@ def upload():
             
             probs = model.predict_item(batched_images)[0]
             
-            with st.spinner('Подождите, снимок обрабатывается...'):
+            with st.spinner('Wait, the snapshot is being processed...'):
                 sleep(3)
             
             index = np.argmax(probs)
-            st.info('Результат классификации модели: ' + classes[index], icon="❗")
-            st.info('Вероятность: ' + str(probs[index]), icon="❗")
+            st.info('Model classification result: ' + classes[index], icon="❗")
+            st.info('Probability: ' + str(probs[index]), icon="❗")
 
         
 if __name__ == "__main__":
