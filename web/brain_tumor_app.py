@@ -16,7 +16,7 @@ from matplotlib import pyplot as plt
 import streamlit as st
 
 import sys
-sys.path.append(r"../)
+sys.path.append(r"..")
 from EfficientNetModel import EfficientNetModel
 
 
