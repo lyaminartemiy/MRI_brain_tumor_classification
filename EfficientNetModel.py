@@ -22,7 +22,13 @@ class EfficientNetModel:
         path_to_model_dict (str): Путь к файлу со словарем весов модели. По умолчанию None.
     
     Методы:
-        None.
+        __init__(self, version, path_to_model_dict=None): инициализирует объект EfficientNetModel.
+        load_model(self, path_to_model_dict): загружает веса обученной модели.
+        save_model(self, name_model_dict): схраненяет веса обученной модели.
+        train(self, max_epochs, optimizer, loss_fn, train_dataloader, val_dataloader): обучение нейросети.
+        freeze_weights(self, number_freezing): заморозка весов слоев нейросети.
+        predict(self, data_loader): предсказывание классов на тестовой выборке.
+        predict_item(self, mini_batch): предсказывание класса изображения (МРТ снимка).
 
     """
 
