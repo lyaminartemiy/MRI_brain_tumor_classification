@@ -1,4 +1,4 @@
-import torch
+﻿import torch
 import torch.nn as nn
 from torchvision import models
 import torch.nn.functional as F
@@ -16,6 +16,7 @@ from matplotlib import pyplot as plt
 import streamlit as st
 
 import sys
+import zipfile
 sys.path.append(r"C:\Users\Artemiy\Desktop\Data Science\Проекты\MRI_brain_tumor_classification")
 from EfficientNetModel import EfficientNetModel
 
@@ -139,6 +140,9 @@ def upload():
             batched_images = torch.cat([img_tensor, img_tensor, img_tensor, img_tensor], dim=0)
             
             probs = model.predict_item(batched_images)[0]
+            
+            with st.spinner('Подождите, снимок обрабатывается...'):
+                sleep(3)
             
             index = np.argmax(probs)
             st.info('Результат классификации модели: ' + classes[index], icon="❗")
