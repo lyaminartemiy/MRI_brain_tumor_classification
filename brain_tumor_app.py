@@ -33,18 +33,18 @@ st.set_page_config(
 )
 
 st.title("BRAIN TUMOR CLASSIFIER")
-st.write("""Сайт для загрузки МРТ снимков и классификации опухолей головного мозга трех типов: глиома, менингиома и pituitary.""")
+st.write("""Web interface for downloading MRI images and classifying brain tumors of 3 types: glioma, meningioma and pituitary tumor.""")
 
 # Настройка боковой панели
-st.sidebar.title("Что такое опухоль головного мозга?")
+st.sidebar.title("What is a brain tumor?")
 st.sidebar.info(
     """
-    Опухоль головного мозга - это скопление или масса аномальных клеток в вашем мозге. Ваш череп, который окружает ваш мозг, очень жесткий. Любой рост внутри такого ограниченного пространства может вызвать проблемы. 
+    A brain tumor is a cluster or mass of abnormal cells in your brain. Your skull, which surrounds your brain, is very hard. Any growth inside such a limited space can cause problems.
     """
 )
 st.sidebar.info(
     """
-    Опухоли головного мозга могут быть раковыми (злокачественными) или нераковыми (доброкачественными). Когда доброкачественные или злокачественные опухоли растут, они могут привести к увеличению давления внутри вашего черепа. Это может привести к повреждению головного мозга и быть опасным для жизни.
+    Brain tumors can be cancerous (malignant) or non-cancerous (benign). When benign or malignant tumors grow, they can lead to increased pressure inside your skull. This can cause brain damage and be life-threatening.
     """
 )
 
@@ -53,9 +53,9 @@ def upload():
     
     st.divider()
     
-    show_data = st.sidebar.selectbox('Выбрать операцию', ('Классифицировать опухоль', 'Виды опухолей', 'Нейросеть'))
+    show_data = st.sidebar.selectbox('Select an action', ('Classify the tumor', 'Types of tumors', 'Neural network'))
     
-    if show_data == 'Нейросеть':
+    if show_data == 'Neural network':
         
         st.subheader('Архитектура модели')
         st.markdown(
@@ -67,7 +67,7 @@ def upload():
         st.image(architecture, caption='Network Architecture')
         st.image(perfomance, caption='Network Perfomance')
         
-    elif show_data == 'Виды опухолей':
+    elif show_data == 'Types of tumors':
         
         st.subheader('Примеры МРТ снимков')
         
@@ -95,7 +95,7 @@ def upload():
             st.write("""Опухоли гипофиза – группа доброкачественных, реже – злокачественных новообразований передней доли (аденогипофиза) или задней доли (нейрогипофиза) железы. Опухоли гипофиза, по статистике, составляют около 15% новообразований внутричерепной локализации. Они одинаково часто диагностируются у лиц обоих полов, обычно в возрасте 30-40 лет. Подавляющее большинство опухолей гипофиза составляют аденомы, которые подразделяются на несколько видов в зависимости от размеров и гормональной активности. Симптомы опухоли гипофиза представляют собой сочетание признаков объемного внутримозгового процесса и гормональных нарушений. Диагностика опухоли гипофиза осуществляется проведением целого ряда клинических и гормональных исследований, ангиографии и МРТ головного мозга.""")
             st.write("""Опухоли гипофиза – группа доброкачественных, реже – злокачественных новообразований передней доли (аденогипофиза) или задней доли (нейрогипофиза) железы. Опухоли гипофиза, по статистике, составляют около 15% новообразований внутричерепной локализации. Они одинаково часто диагностируются у лиц обоих полов, обычно в возрасте 30-40 лет.""")
         
-    elif show_data == 'Классифицировать опухоль':
+    elif show_data == 'Classify the tumor':
         
         with st.spinner('Нейросеть загружается...'):
             model = EfficientNetModel('efficientnet-b1', path_to_model_dict='my-efficientnet-b1')
