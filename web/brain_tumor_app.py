@@ -18,7 +18,7 @@ import streamlit as st
 import sys
 import zipfile
 #sys.path.append(r"C:\Users\Artemiy\Desktop\Data Science\Проекты\MRI_brain_tumor_classification")
-from EfficientNetModel import EfficientNetModel
+from .EfficientNetModel import EfficientNetModel
 
 
 st.set_page_config(
