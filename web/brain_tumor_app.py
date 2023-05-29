@@ -16,8 +16,7 @@ from matplotlib import pyplot as plt
 import streamlit as st
 
 import sys
-import zipfile
-sys.path.append(r"lyaminartemiy\MRI_brain_tumor_classification")
+sys.path.append(r"..\")
 from EfficientNetModel import EfficientNetModel
 
 
