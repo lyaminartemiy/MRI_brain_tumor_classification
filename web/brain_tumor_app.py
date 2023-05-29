@@ -1,4 +1,4 @@
-﻿import torch
+import torch
 import torch.nn as nn
 from torchvision import models
 import torch.nn.functional as F
@@ -16,8 +16,8 @@ from matplotlib import pyplot as plt
 import streamlit as st
 
 import sys
-sys.path.append(r"../")
-from EfficientNetModel import EfficientNetModel
+# "sys.path.append(r"../")
+# from EfficientNetModel import EfficientNetModel
 
 
 st.set_page_config(
